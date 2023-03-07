@@ -24,7 +24,7 @@ const Header = () => {
             </clipPath>
           </defs>
         </svg>
-        <button onclick='buttonClick()'>
+        <button>
           <svg
             width='32'
             height='32'

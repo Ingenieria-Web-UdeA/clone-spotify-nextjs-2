@@ -1,7 +1,9 @@
+import Link from 'next/link';
+
 const Footer = () => {
   return (
     <footer>
-      <a href='/daniel/'>Link a Daniel</a>
+      <Link href='/daniel/'>Link a Daniel</Link>
       <div>
         <span>Company</span>
         <span>Communities</span>
