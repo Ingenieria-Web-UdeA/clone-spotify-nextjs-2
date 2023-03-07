@@ -35,6 +35,18 @@ const playlistsInfo = {
       description: 'Lounge and chill out music for your workday.',
     },
   ],
+  playlists: [
+    {
+      image: '/media/top-hits.png',
+      name: 'Today`s top hits',
+      description: 'PinkPantheress & Ice Spice are on top of the Hottest 50!',
+    },
+    {
+      image: '/media/rap-caviar.png',
+      name: 'RapCaviar',
+      description: 'New music from Polo G, Don Toliver and A Boogie Wit da Hoodie.',
+    },
+  ],
 };
 
 const IndexPage = () => {
@@ -70,11 +82,16 @@ const IndexPage = () => {
               <span>Show all</span>
             </div>
             <div className='playlist-section-container'>
-              <PlaylistCard
-                image='/media/top-hits.png'
-                name='Today`s top hits'
-                description='PinkPantheress & Ice Spice are on top of the Hottest 50!'
-              />
+              {playlistsInfo.playlists.map((playlist, index) => {
+                return (
+                  <PlaylistCard
+                    key={`${playlist.name}_${index}`}
+                    description={playlist.description}
+                    image={playlist.image}
+                    name={playlist.name}
+                  />
+                );
+              })}
             </div>
           </div>
         </section>
